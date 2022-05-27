@@ -1,4 +1,4 @@
 #!/bin/bash
 bash compile.sh
-#valgrind ./ndfsa.exe
-./ndfsa.exe
+valgrind ./ndfsa.exe
+#./ndfsa.exe

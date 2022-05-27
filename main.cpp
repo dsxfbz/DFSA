@@ -32,19 +32,23 @@ int main(int argc, char **argv)
 	std::cout<<"\n";
 	automata.print();
 	
-	/*
-	char * test_arr = new char[10];
-	for (int i=0; i<10; i++) {
-		test_arr[i] = char(int('a')+i);
-		std::cout<<test_arr[i];
+	std::string curr_word = "hello!";
+	std::cout<<"Processing \""<<curr_word<<"\"\n";
+	if (automata.process(curr_word)) {
+		std::cout<<"  Matches!\n";
 	}
-	std::cout<<'\n';
-	std::cout<<in_arr('d', test_arr, 10);
-	std::cout<<'\n';
-	std::cout<<in_arr('z', test_arr, 10);
-	std::cout<<'\n';
-	delete[] test_arr;
-	*/
+	else {
+		std::cout<<"  Doesn't match.\n";
+	}
+	
+	curr_word = "hello";
+	std::cout<<"Processing \""<<curr_word<<"\"\n";
+	if (automata.process(curr_word)) {
+		std::cout<<"  Matches!\n";
+	}
+	else {
+		std::cout<<"  Doesn't match.\n";
+	}
 	return 0;
 }
 
